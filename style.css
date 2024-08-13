@@ -1,19 +1,14 @@
 body{
     background-image: url(sunset.gif) ;
     background-size: cover;
-    background-attachment: fixed;
-    
+    background-attachment: fixed;    
 }
-#nav{
-    background-color: rgb(232, 183, 109);
-    opacity: 0.4;
-    border-bottom: 2px solid black;
-    text-decoration: underline;
+nav{
     height: 40px;
     font-weight: strong;
     font: 20px brown;
 }
-#nav ul{
+ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -22,34 +17,36 @@ body{
     text-align: center;
     
 }
-#nav li{
+li{
    display: inline;
    vertical-align: middle;
-
 }
-
-#nav a{
-    
+a{
     color: black;
     font-weight: bold;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-#nav li a:hover{
-    background-color: yellow;
+nav li a:hover{
+    background-color: yellow; 
+    text-decoration: underline;
 }
-
 #imge h2{
    font: bold 60px cursive ;
    text-align: center;
+   justify-content: center;
    color: black;
-
-}
-#imge img{
-    width: 50%;
-    height: auto;
    display: flex;
+}
+.thelook{
+   display: flex;   
+   width: 90%;
+   margin: 4em;
+   justify-content: center;
+}
+.look{
+    width: 60%;
 }
 #imge p {
     text-align: center;
@@ -57,45 +54,49 @@ body{
     color: aliceblue;
 }
 #imge{
-    margin-bottom:100px;
+    margin:8em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 footer{
     text-align: center;
     color: white;
     font-size: 25px;
     font-weight: bold;
-    margin-bottom: 30px;
+   margin: 0;
 }
-#need{
-    text-align: left;
+#About{
     overflow: hidden;
     font-size: 30px;
     font-weight: bolder;
     font-family: Georgia;
     color: #033e3fee;
-    margin:0 100px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color:rgba(173, 244, 7, 0.378);
+    margin:7em;
+    background-color:rgba(171, 187, 133, 0.5);
 }
-#need p{
+#About p{
     font-size: 20px;
     color: white;
     text-align: justify;
     font-family: 'Lucida Sans';
     margin: 20px 60px;
 }
-#plan{
-    margin-bottom: 100px;
+#Hobby{
+    margin:4em;
+    padding: 3em;
     font-weight: bolder;
     font-family: Georgia;
     color: #1626a3ee;
     background-color: #bed860ee;
+    justify-content: center;
+    align-items: center;
 }
 h3,h4{
 text-decoration: underline;
 font-size: 30px;
 text-align: center;
+cursor: pointer;
 }
 
 .bob{
@@ -103,38 +104,49 @@ text-align: center;
     color: rgb(25, 53, 137);
     text-align: justify;
 }
-.bob img{
+.look2{
     width: 30%;
-    height: auto;
-    margin: 20px 60px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 30%; 
 }
-
+.same{
+   gap: 2rem;
+   height: 60%;
+   width: 60%;
+    display: flex;
+}
 .bye{
     font: 20px solid;
     color: rgb(10, 115, 136);
     text-align: justify;
+    margin: 2rem;
+    line-height: 2rem;
 }
-.bye a:link{
-    color: blueviolet;
+.music a:link{
+    color: rgb(110, 40, 176);
 }
-.bye a:visited{
-    color: rgb(232, 11, 11)6a3ee;
+.music a:visited{
+    color: rgb(6, 94, 16);
 }
-.bye a:hover{
+.music a:hover{
     color: red;
+}
+iframe{
+    width:560px;
+    height:315px;
+    position: relative;
 }
 
 .hey{
-    font: 20px solid #4dd224;
+    font: 25px solid #4dd224;
     text-align: justify;
+    gap: 2em;
+    justify-content: space-around;
+    line-height: 2rem;
 }
 .images {
     display: flex;
     flex-wrap: wrap;
-    padding: 30px;
-    margin: 20px 60px;
+    width: 80%;
 
 }
 .images img{
@@ -144,5 +156,38 @@ text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
+.music{
+   position: relative;
+    margin: 2em;
+    padding: 2em;
+   display: grid;
+}
+@media (max-width:1200px) {
+    iframe{
+        width:fit-content;
+        height:fit-content;
+    }
+    #Hobby{
+        margin: 3em;
+       justify-content: center;
+    }
+}
+@media (max-width:650px){
+    iframe{
+        width:fit-content;
+        height:fit-content;
+    }
+    .thelook{
+        width:100%;
+        justify-content: center;
+    }
+    .imge{
+        display: flex;
+    flex-wrap: wrap; 
+    margin: 0;   
+    }
+    #About{
+        margin: 0;
+    }
 
-
+}
